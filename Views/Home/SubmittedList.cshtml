@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Submitted Restaurants";
+
+}
+@model IEnumerable<Top5Restaurants.Models.ApplicationResponse>
+
+<div>
+    <h2>Here are the submitted restaurants.</h2>    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Restaurant Name</th>
+                <th>Favorite Dish</th>
+                <th>Restaurant Phone</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Top5Restaurants.Models.ApplicationResponse y in Model)
+            {
+                <tr>
+                    <td>@y.Name</td>
+                    <td>@y.RestaurantName</td>
+                    <td>@y.FavoriteDish</td>
+                    <td>@y.RestaurantPhone</td>
+                    
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
